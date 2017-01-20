@@ -20,21 +20,43 @@ h3 {
     
 }
 
-#circle1 {
-    height: 125px;
-    width: 125px;
+#circlered {
+    height: 55px;
+    width: 55px;
     background: red;
     margin-top: 200px;
+    margin-right: 250px;
     animation-name: redpaintball;
-    animation-duration: 4s;
+    animation-duration: 7s;
     animation-iteration-count: 1;
 }
 
 @keyframes redpaintball {
-    to {
-        left: 0%;
-    }
     from {
-        left: 100%;
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(10000px, 0px);
     }
 }
+
+#circleyellow{
+    height: 55px;
+    width: 55px;
+    background: yellow;
+    margin-top: 250px;
+    margin-right: 100px;
+    animation-name: yellowpaintball;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out
+}
+@keyframes yellowpaintball {
+     from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(10000px, 0px);
+    }
+}
+
