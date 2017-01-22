@@ -1,23 +1,77 @@
 header {
     text-align: center;
-    font-size: 25px;
+    font-size: 50px;
 }
 
 body {
     color: white;
-    background: black;
+    background-image: url(background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h3 {
     font-family: 'Cabin', sans-serif;
-    margin-top: 130px;
+    margin-top: 50px;
     text-align: center;
     color: white;
+    text-shadow: 2px 2px 5px black;
     /* text-shadow: 2px 2px 2px white; */
 }
 
+p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 30px;
+    margin-top: -100px;
+}
+
+#divwhere {
+    height: 100px;
+    width: 150px;
+    /*   background: linear-gradient(to top left, red, orange); */
+    background-image:url(where.jpg);
+    background-size:cover;
+    font-family: 'Cabin', sans-serif;
+    margin-right: 200px;
+    margin-top: 200px;
+    float: left;
+    font-size: 30px;
+    animation-name: spin;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#divsafe {
+    font-family: 'Cabin', sans-serif;
+    margin-top: -250px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#divneed {
+    height: 100px;
+    width: 150px;
+    /* background: linear-gradient(to bottom right, red, orange); */
+    background-image:url(need.jpg);
+    background-size:cover;
+    font-family: 'Cabin', sans-serif;
+    font-size: 30px;
+    margin-left: 1050px;
+    padding-left: 20px;
+    float: right;
+    margin-top: -85px;
+    display: absolute;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+}
+
 .circle {
+    /*creating the paintball animation*/
     border-radius: 50%;
+    /* creates the shape of a circle*/
 }
 
 #circlered {
@@ -25,17 +79,20 @@ h3 {
     width: 55px;
     background: red;
     margin-top: 50px;
+    margin-left: -500px;
     animation-name: redpaintball;
     animation-duration: 7s;
     animation-iteration-count: 1;
 }
 
 @keyframes redpaintball {
+    /* makes the paintball move across the screen */
     from {
-        transform: translate(-400px, 0px);
+        transform: translate(-100px, 0px);
     }
     to {
         transform: translate(10000px, 0px);
+        opacity: 0;
     }
 }
 
@@ -43,8 +100,7 @@ h3 {
     height: 55px;
     width: 55px;
     background: yellow;
-   
-  
+    margin-left: -500px;
     animation-name: yellowpaintball;
     animation-duration: 7s;
     animation-iteration-count: 1;
@@ -65,6 +121,7 @@ h3 {
     background: green;
     margin-top: 50px;
     margin-right: 370px;
+    margin-left: -500px;
     animation-name: greenpaintball;
     animation-duration: 7s;
     animation-iteration-count: 1;
@@ -72,9 +129,18 @@ h3 {
 
 @keyframes greenpaintball {
     from {
-        transform: translate(-330px, 0px);
+        transform: translate(-330px, 0px);/*all balls need to be off screen ater animation is over so its x position is negative*/
     }
     to {
-        transform: translate(10000px, 0px);
+        transform: translate(10000px, 0px);/* having a big x number gives the idea that the paintballs when across the screen and disappeared*/
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
