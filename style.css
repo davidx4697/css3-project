@@ -2,30 +2,29 @@ header {
     text-align: center;
     font-size: 25px;
 }
+
 body {
-    color:white;
-    background:black;
+    color: white;
+    background: black;
 }
 
 h3 {
     font-family: 'Cabin', sans-serif;
-    margin-top:130px;
+    margin-top: 130px;
     text-align: center;
     color: white;
-  /* text-shadow: 2px 2px 2px white; */
+    /* text-shadow: 2px 2px 2px white; */
 }
 
 .circle {
     border-radius: 50%;
-    
 }
 
 #circlered {
     height: 55px;
     width: 55px;
     background: red;
-    margin-top: 200px;
-    margin-right: 250px;
+    margin-top: 50px;
     animation-name: redpaintball;
     animation-duration: 7s;
     animation-iteration-count: 1;
@@ -33,30 +32,49 @@ h3 {
 
 @keyframes redpaintball {
     from {
-        transform: translate(0px, 0px);
+        transform: translate(-400px, 0px);
     }
     to {
         transform: translate(10000px, 0px);
     }
 }
 
-#circleyellow{
+#circleyellow {
     height: 55px;
     width: 55px;
     background: yellow;
-    margin-top: 250px;
-    margin-right: 100px;
+   
+  
     animation-name: yellowpaintball;
     animation-duration: 7s;
     animation-iteration-count: 1;
-    animation-timing-function: ease-in-out
 }
+
 @keyframes yellowpaintball {
-     from {
-        transform: translate(0px, 0px);
+    from {
+        transform: translate(-450px, 50px);
     }
     to {
         transform: translate(10000px, 0px);
     }
 }
 
+#circlegreen {
+    height: 55px;
+    width: 55px;
+    background: green;
+    margin-top: 50px;
+    margin-right: 370px;
+    animation-name: greenpaintball;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+}
+
+@keyframes greenpaintball {
+    from {
+        transform: translate(-330px, 0px);
+    }
+    to {
+        transform: translate(10000px, 0px);
+    }
+}
